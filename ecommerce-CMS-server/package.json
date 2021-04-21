@@ -1,0 +1,50 @@
+{
+  "name": "ecommerce-CMS-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "db:create:dev": "SET NODE_ENV=development&&npx sequelize-cli db:create",
+    "db:migrate:dev": "SET NODE_ENV=development&&npx sequelize-cli db:migrate",
+    "db:seed:dev": "SET NODE_ENV=development&&npx sequelize-cli db:seed",
+    "db:seed:all:dev": "SET NODE_ENV=development&&npx sequelize-cli db:seed:all",
+    "db:seed:undo:dev": "SET NODE_ENV=development&&npx sequelize-cli db:seed:undo",
+    "db:seed:undo:all:dev": "SET NODE_ENV=development&&npx sequelize-cli db:seed:undo:all",
+    "db:create:test": "SET NODE_ENV=test&&npx sequelize-cli db:create",
+    "db:migrate:test": "SET NODE_ENV=test&&npx sequelize-cli db:migrate",
+    "db:seed:test": "SET NODE_ENV=test&&npx sequelize-cli db:seed",
+    "db:seed:all:test": "SET NODE_ENV=test&&npx sequelize-cli db:seed:all",
+    "db:seed:undo:test": "SET NODE_ENV=test&&npx sequelize-cli db:seed:undo",
+    "db:seed:undo:all:test": "SET NODE_ENV=test&&npx sequelize-cli db:seed:undo:all",
+    "start": "node bin/http.js",
+    "test": "SET NODE_ENV=test&&npx jest --runInBand --verbose --detectOpenHandles",
+    "dev": "SET NODE_ENV=development&&npx nodemon bin/http.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wibowo-laks/ecommerce-CMS-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wibowo-laks/ecommerce-CMS-server/issues"
+  },
+  "homepage": "https://github.com/wibowo-laks/ecommerce-CMS-server#readme",
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.7",
+    "sequelize-cli": "^6.2.0",
+    "supertest": "^6.1.3"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "nodemailer": "^6.4.18",
+    "pg": "^8.5.1",
+    "sequelize": "^6.5.0"
+  }
+}

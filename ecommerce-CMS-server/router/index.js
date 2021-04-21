@@ -1,0 +1,20 @@
+const router = require('express').Router()
+const userRouter = require('./user')
+const productRouter = require('./product')
+const categoryRouter = require('./category')
+const { authenticate } = require('../middlewares/auth')
+const bannerRoutes = require('./banner')
+const customerRoutes = require('./customer')
+const cartRoutes = require('./cart')
+const wishlistRoutes = require('./whislist')
+
+router.use(userRouter)
+router.use('/customer', customerRoutes)
+router.use(authenticate)
+router.use('/products',productRouter)
+router.use('/categories', categoryRouter)
+router.use('/banners', bannerRoutes)
+router.use('/carts', cartRoutes)
+router.use('/wishlists', wishlistRoutes)
+
+module.exports = router
